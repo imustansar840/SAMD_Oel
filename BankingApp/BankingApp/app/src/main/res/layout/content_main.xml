@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="marcusobyrne.bankingapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/createAccount"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="344dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="38dp"
+        android:background="#bf2522"
+        android:onClick="createAccountClicked"
+        android:text="Create Account"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="320dp"
+        tools:text="Create User"
+        android:layout_below="@+id/textViewWelcome"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="344dp"
+        android:layout_height="48dp"
+        android:background="#bf2522"
+        android:onClick="loginClicked"
+        android:text="Login"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="133dp"
+        tools:style="@style/Widget.AppCompat.Button"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="321dp"
+        android:layout_height="39dp"
+        android:text="Welcome to Marcus' Bank!"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="344dp"
+        android:layout_height="19dp"
+        android:text="OR"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="246dp"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/createAccount"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_alignStart="@+id/loginButton" />
+</android.widget.RelativeLayout>

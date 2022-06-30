@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="marcusobyrne.bankingapp.newUser">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
+        android:text="Name:"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewAddress1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address Line 1:"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignBaseline="@+id/Address1"
+        android:layout_alignBottom="@+id/Address1"
+        android:layout_alignLeft="@+id/textViewName"
+        android:layout_alignStart="@+id/textViewName" />
+
+    <TextView
+        android:id="@+id/textViewAddress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address Line 2:"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignBaseline="@+id/Address2"
+        android:layout_alignBottom="@+id/Address2"
+        android:layout_alignLeft="@+id/textViewAddress1"
+        android:layout_alignStart="@+id/textViewAddress1" />
+
+    <TextView
+        android:id="@+id/textViewAccNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Number:"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignBaseline="@+id/AccountNumber"
+        android:layout_alignBottom="@+id/AccountNumber"
+        android:layout_alignLeft="@+id/textViewAddress2"
+        android:layout_alignStart="@+id/textViewAddress2" />
+
+    <TextView
+        android:id="@+id/textViewPIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PIN:"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignBaseline="@+id/PINno"
+        android:layout_alignBottom="@+id/PINno"
+        android:layout_alignLeft="@+id/textViewAccNo"
+        android:layout_alignStart="@+id/textViewAccNo" />
+
+    <TextView
+        android:id="@+id/textViewBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Balance:"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignBaseline="@+id/Balance"
+        android:layout_alignBottom="@+id/Balance"
+        android:layout_alignLeft="@+id/textViewPIN"
+        android:layout_alignStart="@+id/textViewPIN" />
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewName"
+        android:layout_alignBottom="@+id/textViewName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="eg: John Smith"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Address1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Name"
+        android:ems="10"
+        android:hint="11 Avenue A"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Address2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Address1"
+        android:layout_alignStart="@+id/Address1"
+        android:layout_below="@+id/Address1"
+        android:ems="10"
+        android:hint="Dublin 2"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/AccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Address2"
+        android:layout_alignStart="@+id/Address2"
+        android:layout_below="@+id/Address2"
+        android:ems="10"
+        android:hint="999999"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/PINno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AccountNumber"
+        android:layout_alignStart="@+id/AccountNumber"
+        android:layout_below="@+id/AccountNumber"
+        android:ems="10"
+        android:hint="0000"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/Balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/PINno"
+        android:ems="10"
+        android:hint="000.00"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/saveUser"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:background="#bf2522"
+        android:onClick="saveUser"
+        android:text="Save User"
+        android:textSize="18sp"
+        android:layout_below="@+id/Balance"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</android.widget.RelativeLayout>
